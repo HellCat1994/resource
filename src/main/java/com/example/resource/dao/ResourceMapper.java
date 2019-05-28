@@ -10,7 +10,8 @@ public interface ResourceMapper {
     @Select("select count(1) from t_demo_resource_s00504329 where user_id=#{userid}")
     int countResourceUseId(int userid);
 
-    @Delete("delete from t_demo_resource_s00504329 where user_id=#{userid} and resource_id = #{resourceid}")
+    @Delete("delete from t_demo_resource_s00504329 where user_id=#{userid} " +
+            "                                        and resource_id = #{resourceid}")
     int deleteEcsServer(@Param("userid") int userid, @Param("resourceid") int resourceid);
 
     @Insert("insert into t_demo_resource_s00504329(resource_state,user_id) values ('运行',#{userId})")

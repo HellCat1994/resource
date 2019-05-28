@@ -29,7 +29,8 @@ public class Resource {
      * @return
      */
     @DeleteMapping(path = "/resouce")
-    public HashMap<String,String> deleteECSServer(@RequestParam("userid") int userid,@RequestParam("resourceid") int resourceid) {
+    public HashMap<String,String> deleteECSServer(@RequestParam("userid") int userid,
+                                                  @RequestParam("resourceid") int resourceid) {
         return resourceService.deleteECSServer(userid,resourceid);
     }
 
