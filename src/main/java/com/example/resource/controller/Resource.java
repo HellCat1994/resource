@@ -17,7 +17,7 @@ public class Resource {
      * @param userid
      * @return
      */
-    @PostMapping(path = "/resource/order")
+    @PostMapping(path = "/resouce/order")
     public HashMap<String,Object> userOrderECS(@RequestParam("userid") int userid){
         return resourceService.userOrderECS(userid);
     }
@@ -28,7 +28,7 @@ public class Resource {
      * @param resourceid
      * @return
      */
-    @DeleteMapping(path = "/resource")
+    @DeleteMapping(path = "/resouce")
     public HashMap<String,String> deleteECSServer(@RequestParam("userid") int userid,@RequestParam("resourceid") int resourceid) {
         return resourceService.deleteECSServer(userid,resourceid);
     }
@@ -38,7 +38,7 @@ public class Resource {
      * @param userid
      * @return
      */
-    @GetMapping(path = "/resource")
+    @GetMapping(path = "/resouce")
     public HashMap<String,Object> queryUserResources(int userid) {
         return resourceService.queryResourceByUserId(userid);
     }
