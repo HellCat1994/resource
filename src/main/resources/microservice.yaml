@@ -1,0 +1,14 @@
+APPLICATION_ID: app.test
+service_description:
+  name: resource
+  version: 1.2.0
+servicecomb:
+  handler:
+    chain:
+      Provider: {}
+  rest:
+    address: 0.0.0.0:9088
+  service:
+    registry:
+      address: http://127.0.0.1:30100
+      autodiscovery: false
